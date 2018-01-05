@@ -16,6 +16,7 @@
     "build": "npm run source && npm run minify",
     "dev": "rollup -c -w",
     "test": "tsc && rollup -c && ava --verbose",
+    "browserTest": "tsc && rollup -c && node browserTest.js",
     "prepublishOnly": "tsc && npm run build && ava --verbose && npm run doc && npm run doc-md",
     "doc": "jsdoc --tutorials guide_notes --readme README.md --configure jsdoc.json --verbose",
     "doc-md": "jsdoc2md src/** > API.md"
@@ -44,6 +45,7 @@
     "docdash": "^0.4.0",
     "jsdoc": "^3.5.5",
     "jsdoc-to-markdown": "next",
+    "puppeteer": "^0.13.0",
     "rollup": "^0.50.0",
     "rollup-plugin-commonjs": "^8.2.1",
     "rollup-plugin-node-resolve": "^3.0.0",
